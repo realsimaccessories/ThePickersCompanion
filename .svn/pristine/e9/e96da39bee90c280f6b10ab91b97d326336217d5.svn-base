@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="au.com.ozswapntrade.m.thepickerscompanion.MainActivity">
+
+    <ImageView android:id="@+id/solid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@color/ASNTBlue"
+        android:contentDescription="@string/solid" />
+
+    <ImageView android:id="@+id/splashScreen"
+        android:contentDescription="@+id/splashScreen"
+        android:visibility="visible"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:keepScreenOn="true"
+        android:paddingLeft="10px"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/animatevector" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/activity_main_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
